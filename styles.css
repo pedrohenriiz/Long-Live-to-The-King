@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Nunito:wght@300;400;600;700;800&family=Poppins:wght@300&display=swap');
+
+:root {
+  --black-color: #232323;
+  --white-color: #fff;
+  --orange-color: #eea047;
+
+  --gray-one-color: #929292;
+  --gray-two-color: #585858;
+
+  --content-p-margin: 10px 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+}
+
+p {
+  font-family: 'nunito';
+  font-size: 18px;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: flex;
+  width: fit-content;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  scroll-behavior: smooth;
+}
+
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main-content,
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  margin-left: 40px;
+  opacity: 1;
+  transition: 2s ease opacity;
+}
+
+.page-title {
+  font-size: 70px;
+  font-family: 'nunito';
+}
+
+.page-title span {
+  color: var(--orange-color);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* COMMON STYLES*/
+
+.title {
+  font-size: 80px;
+  font-family: 'nunito';
+}
+
+.title span {
+  color: var(--orange-color);
+}
+
+.one {
+  background-color: var(--black-color);
+}
+
+.slide:nth-of-type(even) {
+  background-color: var(--white-color);
+  color: var(--gray-two-color);
+}
+
+.slide:nth-of-type(odd) {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+/* SECTION - ONE */
+
+.one .main-content p {
+  max-width: 600px;
+  margin: var(--content-p-margin);
+  color: var(--gray-one-color);
+}
+
+.one .scroll-button {
+  margin-top: 20px;
+  border: 1px solid var(--gray-one-color);
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: var(--gray-one-color);
+  opacity: 1;
+  font-family: 'nunito';
+}
+
+.one .scroll-button span {
+  color: var(--orange-color);
+  animation: scrollArrow 1s infinite;
+  display: inline-block;
+  transition: ease;
+  margin-left: 2px;
+}
+
+.one img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* SECTION TWO */
+
+.two .content p {
+  max-width: 800px;
+  margin: var(--content-p-margin);
+  color: var(--gray-two-color);
+}
+
+.two img {
+  max-width: 700px;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-position: left;
+}
+
+/* SECTION - THREE */
+
+.three .content p {
+  max-width: 600px;
+  margin: var(--content-p-margin);
+  color: var(--gray-one-color);
+}
+
+.three img {
+  max-width: 700px;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-position: top left;
+}
+
+/* SECTION - FOUR */
+
+.four .content p {
+  max-width: 700px;
+  margin-top: 10px;
+  color: var(--gray-two-color);
+}
+
+.four img {
+  max-width: 750px;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+/* SECTION - FIVE */
+
+.five .content p {
+  max-width: 700px;
+  margin-top: 10px;
+  color: var(--gray-one-color);
+}
+
+.five img {
+  max-width: 700px;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTION - SIX */
+
+.six .content p {
+  max-width: 700px;
+  margin-top: 10px;
+  color: var(--gray-two-color);
+}
+
+.six img {
+  max-width: 700px;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTION - SEVEN */
+
+.seven .content p {
+  max-width: 700px;
+  margin-top: 10px;
+  color: var(--gray-one-color);
+}
+
+.seven img {
+  max-width: 700px;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTION - EIGHT (DONATE) */
+
+.eight {
+  justify-content: center;
+}
+
+.last-page-title {
+  font-size: 70px;
+  font-family: 'nunito';
+  color: var(--orange-color);
+  margin-bottom: 10px;
+}
+
+.eight p {
+  color: var(--gray-two-color);
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'nunito';
+}
+
+.donate {
+  border: 1px solid var(--orange-color);
+  background-color: transparent;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 40px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-family: 'nunito';
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes scrollArrow {
+  0% {
+    transform: translateX(0px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
