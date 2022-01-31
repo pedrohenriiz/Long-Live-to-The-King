@@ -8,7 +8,7 @@ Long Live to The King is a responsive horizontal website that show some informat
 All images used in this project can be found at: https://unsplash.com/
 
 ### Access the project
-Click on the link below to access the project.
+Click on the link to access the project.
 https://pedrohenriiz.github.io/Long-Live-to-The-King/
 
 ### To run this project
